@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedback | NSS TRAVELS - வெற்றி பயணம்</title><link rel="icon" type="image/png" href="images/nss-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<main class="page"><form class="form" id="f"><h2>Feedback</h2><div class="f"><label>Name</label><input id="name"></div><div class="f"><label>Email</label><input id="email" type="email"></div>
+<div class="f"><label>Rating</label><div class="stars" id="stars"></div></div><div class="f"><label>Feedback</label><textarea id="message" rows="4"></textarea></div><button class="btn">SUBMIT FEEDBACK</button><div id="msg" class="msg"></div></form></main>
+<script src="js/main.js"></script>
+<script src="js/payment.js"></script>
+<script>initFeedback();$("#f").onsubmit=submitFeedback</script>
+</body></html>

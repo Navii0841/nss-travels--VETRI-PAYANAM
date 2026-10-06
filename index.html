@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | NSS TRAVELS - வெற்றி பயணம்</title><link rel="icon" type="image/png" href="images/nss-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="hero"><div class="cloud"></div><div class="cloud"></div><div class="cloud"></div>
+<div class="wrap heroGrid"><h1>🚌 NSS TRAVELS</h1><h2>வெற்றி பயணம்</h2><p>Travel Safe. Travel Smart. Book your bus seat in minutes.</p>
+<form class="search" id="sf"><h3>Search Bus</h3><div class="row"><div><label>From</label><select id="from"></select></div><div><label>To</label><select id="to"></select></div>
+<div><label>Journey Date</label><input type="date" id="date"></div><div><label>Passengers</label><input type="number" id="pax" min="1" max="6" value="1"></div></div>
+<button class="btn" type="submit">SEARCH BUSES</button></form></div>
+<div class="heroBus" id="hb"></div><div class="road"></div></header>
+<main class="wrap"><div class="feat"><div class="reveal"><span>🚌</span><b>Bus Travel</b></div><div class="reveal"><span>🎫</span><b>Ticket Booking</b></div><div class="reveal"><span>📱</span><b>Easy Booking</b></div><div class="reveal"><span>💳</span><b>UPI Payment</b></div><div class="reveal"><span>🎟</span><b>Digital Ticket</b></div></div>
+<section class="sec"><h2>Our Buses</h2><p>Five fictional NSS TRAVELS bus types for your journey.</p><br><a class="btn alt" href="buses.html">View All Buses</a></section>
+<section class="sec"><div class="vj reveal"><img src="images/vijay-image.png" alt="Decorative project image"><p><b>Decorative image</b><br><small>Shown only as a project visual. It does not represent ownership, endorsement or any official link with NSS TRAVELS.</small></p></div></section></main>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+<script>cityOptions($("#from"),"Select city");cityOptions($("#to"),"Select city");
+const t=todayISO();$("#date").min=t;$("#date").value=t;
+$("#hb").innerHTML=busSVG("#b3122b","NSS EXPRESS");$("#sf").onsubmit=searchBuses;</script>
+</body></html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Ticket | NSS TRAVELS - வெற்றி பயணம்</title><link rel="icon" type="image/png" href="images/nss-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<main class="wrap page"><div class="steps"><span class="done">1 Search</span><span class="done">2 Select Bus</span><span class="on">3 Select Seat</span><span class="">4 Passenger</span><span class="">5 Payment</span><span class="">6 Ticket</span></div><div class="card" id="busInfo" style="text-align:left;margin-bottom:18px"></div>
+<div class="bookGrid"><div><div class="card"><h3>Select Seat</h3><div class="legend"><span><i style="background:#fff;border:1px solid #3b8f4d"></i>Available</span><span><i style="background:#b3122b"></i>Selected</span><span><i style="background:#b9bfcd"></i>Booked</span></div>
+<div class="bus"><div class="driver">🧑‍✈️ DRIVER</div><div id="seats"></div><div class="exit">EXIT</div></div></div>
+<div class="card" style="margin-top:18px;text-align:left"><h3 style="margin-bottom:10px">Passenger Details</h3><div id="paxForms"></div></div></div>
+<aside class="sum"><h3 style="margin-bottom:8px">Booking Summary</h3><div id="sum"></div><br><button class="btn" id="goPay" style="width:100%">Continue to Payment</button></aside></div></main>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+<script>initBooking()</script>
+</body></html>

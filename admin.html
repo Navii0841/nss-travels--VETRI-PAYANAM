@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin | NSS TRAVELS</title><link rel="icon" type="image/png" href="images/nss-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+<style>.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;font-size:13px}.tbl th{background:var(--navy);color:#fff;text-align:left;padding:10px;white-space:nowrap}.tbl td{padding:9px 10px;border-bottom:1px solid #eee;vertical-align:top}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}</style></head>
+<body>
+<main class="wrap page">
+<form class="form" id="gate"><h2>Admin Login</h2><div class="f"><label>Admin Username</label><input id="au"></div><div class="f"><label>Admin Password</label><input id="ap" type="password"></div><button class="btn" style="width:100%">LOGIN</button><div id="msg" class="msg"></div></form>
+<div id="panel" style="display:none"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px"><h1>NSS TRAVELS Admin Panel</h1><div><button class="btn gold" onclick="exportCSV()">Export Bookings CSV</button> <button class="btn alt" onclick="adminLogout()">Logout</button></div></div>
+<div class="grid" id="stats" style="margin-top:18px"></div>
+<div class="tabs"><button class="btn" data-t="bookings" onclick="tab('bookings')">Bookings</button><button class="btn alt" data-t="users" onclick="tab('users')">Users</button><button class="btn alt" data-t="enq" onclick="tab('enq')">Enquiries</button><button class="btn alt" data-t="fb" onclick="tab('fb')">Feedback</button></div>
+<div id="t-bookings"></div><div id="t-users" style="display:none"></div><div id="t-enq" style="display:none"></div><div id="t-fb" style="display:none"></div>
+<p class="note">Demo admin: data shown is only what is saved in THIS browser's LocalStorage. For real multi-user data a backend database is required.</p></div>
+</main>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+<script>$("#gate").onsubmit=adminLogin;if(isAdmin()){showAdmin();tab("bookings")}else{$("#gate").addEventListener("submit",()=>setTimeout(()=>{if(isAdmin())tab("bookings")},0))}</script>
+</body></html>

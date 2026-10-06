@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment | NSS TRAVELS - வெற்றி பயணம்</title><link rel="icon" type="image/png" href="images/nss-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<main class="wrap page"><div class="steps"><span class="done">1 Search</span><span class="done">2 Select Bus</span><span class="done">3 Select Seat</span><span class="done">4 Passenger</span><span class="on">5 Payment</span><span class="">6 Ticket</span></div><div class="grid"><div class="card qrbox"><h2>Scan &amp; Pay</h2><br><img src="images/payment-qr.png" alt="Payment QR"><p style="margin-top:12px">UPI ID: <b id="upi"></b></p></div>
+<div class="card" style="text-align:left"><p>Amount to Pay</p><div class="amt" id="amount"></div><div class="sum" style="box-shadow:none;position:static;padding:0" id="paySum"></div><br>
+<div class="f"><label>Payment Reference / UTR Number</label><input id="ref" placeholder="Enter reference from your UPI app"></div><button class="btn" id="paid" style="width:100%">I Have Completed Payment</button><div id="msg" class="msg"></div>
+<div class="note">Demo project: payment is confirmed by you and is NOT verified by any bank or gateway. A real payment gateway would be needed for production.</div></div></div></main>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/payment.js"></script>
+<script>initPayment()</script>
+</body></html>

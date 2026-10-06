@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enquiry | NSS TRAVELS - வெற்றி பயணம்</title><link rel="icon" type="image/png" href="images/nss-logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<main class="page"><form class="form wide" id="f"><h2>Enquiry</h2><div class="row"><div><label>Name</label><input id="name"></div><div><label>Mobile</label><input id="mobile" maxlength="10"></div><div><label>Email</label><input id="email" type="email"></div></div>
+<div class="row"><div><label>Travel From</label><select id="from"></select></div><div><label>Travel To</label><select id="to"></select></div><div><label>Journey Date</label><input id="date" type="date"></div></div>
+<div class="f"><label>Message</label><textarea id="message" rows="4"></textarea></div><button class="btn">SEND ENQUIRY</button><div id="msg" class="msg"></div><p style="margin-top:10px">Email: <a href="mailto:knavin882007@gmail.com"><b>knavin882007@gmail.com</b></a></p></form></main>
+<script src="js/main.js"></script>
+<script src="js/payment.js"></script>
+<script>cityOptions($("#from"),"Select city");cityOptions($("#to"),"Select city");$("#f").onsubmit=submitEnquiry</script>
+</body></html>
